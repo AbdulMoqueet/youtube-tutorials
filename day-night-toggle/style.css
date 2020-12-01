@@ -1,0 +1,239 @@
+:root {
+  --bg1: #e0e0e0;
+  --bg2: #100f12;
+  --orange: #ffc207;
+  --dark-purple: rgb(64, 1, 100);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--bg1);
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  z-index: -1;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 40px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  background-color: var(--dark-purple);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50px;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  background-color: var(--orange);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  left: 5px;
+  bottom: 5px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider::after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  background-color: var(--dark-purple);
+  border-radius: 50%;
+  left: -26px;
+  bottom: 4px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider::before {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+}
+
+input:checked + .slider::after {
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
+}
+
+input:checked ~ .bg {
+  background-color: var(--bg2);
+}
+
+/* YouTube Style */
+.the-blood-coders__learn-it-btn,
+.the-blood-coders__learn-it-btn:link,
+.the-blood-coders__learn-it-btn:active,
+.the-blood-coders__learn-it-btn:visited {
+  padding: 0.5rem 2rem;
+  background-color: #ff0000;
+  position: absolute;
+  bottom: 2rem;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.the-blood-coders__learn-it-btn:active {
+  -webkit-box-shadow: 0 0 0rem rgba(0, 0, 0, 0);
+          box-shadow: 0 0 0rem rgba(0, 0, 0, 0);
+  -webkit-transform: translateX(-50%) scale(0.99);
+          transform: translateX(-50%) scale(0.99);
+}
+
+.the-blood-coders__btn-icon {
+  font-size: 1.6em;
+  margin-right: 0.5rem;
+}
+
+.the-blood-coders__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.644);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.the-blood-coders__popup {
+  width: 18rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.the-blood-coders__popup-header,
+.the-blood-coders__popup-header:link,
+.the-blood-coders__popup-header:visited {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: -2.6rem;
+  margin-bottom: 2rem;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#e90606), to(#ff4a4a));
+  background-image: linear-gradient(to right top, #e90606, #ff4a4a);
+  color: #f1f1f1;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1px;
+  -webkit-transform: skew(-10deg) rotate(-3deg);
+          transform: skew(-10deg) rotate(-3deg);
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+
+.the-blood-coders__code-name {
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+
+.the-blood-coders__code-name--span {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#400164), to(#9c27e0));
+  background-image: linear-gradient(to right top, #400164, #9c27e0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.the-blood-coders__link {
+  word-break: break-all;
+  line-height: 1.4;
+  display: block;
+  color: #1d1dfa;
+  margin-bottom: 1.2rem;
+}
+
+.the-blood-coders__ok-btn,
+.the-blood-coders__ok-btn:link,
+.the-blood-coders__ok-btn:active,
+.the-blood-coders__ok-btn:visited {
+  text-transform: uppercase;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  color: #ffffff;
+  background-image: -webkit-gradient(linear, left top, right top, from(#400164), to(#9c27e0));
+  background-image: linear-gradient(to right, #400164, #9c27e0);
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  font-weight: 400;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transform: skew(-10deg) rotate(-3deg);
+          transform: skew(-10deg) rotate(-3deg);
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+/*# sourceMappingURL=style.css.map */

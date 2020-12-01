@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheBloodCoders</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <label class="switch">
+    <input type="checkbox">
+    <div class="slider"></div>
+    <div class="bg"></div>
+  </label>
+
+  <!--  YouTube Style  -->
+  <a href="https://youtu.be/nipD2n8xVcI" class="the-blood-coders__learn-it-btn" target="_blank">
+    <i class="ri-youtube-fill the-blood-coders__btn-icon"></i>
+    Learn it
+  </a>
+
+
+  <div class="the-blood-coders__backdrop">
+    <div class="the-blood-coders__popup">
+      <a href="https://youtu.be/nipD2n8xVcI" class="the-blood-coders__popup-header" target="_blank">
+        <i class="ri-youtube-fill the-blood-coders__btn-icon"></i>TheBloodCoders
+      </a>
+
+      <h1 class="the-blood-coders__code-name">
+        <span class="the-blood-coders__code-name--span">Day Night Toggle Switch
+      </h1>
+
+      <a href="https://youtu.be/nipD2n8xVcI" class="the-blood-coders__link"
+        target="_blank">https://youtu.be/nipD2n8xVcI</a>
+      <a href="#" class="the-blood-coders__ok-btn">Ok</a>
+    </div>
+  </div>
+
+  <script>
+    const btnOk = document
+      .querySelector('.the-blood-coders__ok-btn');
+
+    btnOk.addEventListener('click', (e) => {
+      e.target.closest('.the-blood-coders__backdrop').remove();
+    });
+  </script>
+
+</body>
+
+</html>
