@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blood Coders</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <fieldset>
+            <legend>Wash Your Hand</legend>
+        </fieldset>
+
+        <fieldset>
+            <legend>Use Mask Always</legend>
+        </fieldset>
+
+        <fieldset>
+            <legend>Don't touch your face</legend>
+        </fieldset>
+
+        <fieldset>
+            <legend>Stay At Home</legend>
+        </fieldset>
+
+    </div>
+
+    <!--  YouTube Style  -->
+    <a href="https://youtu.be/_qDOSoP-5EA" class="the-blood-coders__learn-it-btn" target="_blank">
+        <i class="ri-youtube-fill the-blood-coders__btn-icon"></i>
+        Learn it
+    </a>
+
+
+    <div class="the-blood-coders__backdrop">
+        <div class="the-blood-coders__popup">
+            <a href="https://youtu.be/_qDOSoP-5EA" class="the-blood-coders__popup-header" target="_blank">
+                <i class="ri-youtube-fill the-blood-coders__btn-icon"></i>TheBloodCoders
+            </a>
+
+            <h1 class="the-blood-coders__code-name">
+                <span class="the-blood-coders__code-name--span">Overlapping Text Effect
+            </h1>
+
+            <a href="https://youtu.be/_qDOSoP-5EA" class="the-blood-coders__link"
+                target="_blank">https://youtu.be/_qDOSoP-5EA</a>
+            <a href="#" class="the-blood-coders__ok-btn">Ok</a>
+        </div>
+    </div>
+
+    <script>
+        const btnOk = document
+            .querySelector('.the-blood-coders__ok-btn');
+        const container = document
+            .querySelector('.container');
+
+        btnOk.addEventListener('click', (e) => {
+            e.target.closest('.the-blood-coders__backdrop').remove();
+            container.classList.add('show');
+        });
+
+        container
+            .addEventListener('click', () => {
+                container.style.animation = 'spinIT 1.6s';
+            });
+
+        container
+        .addEventListener('webkitAnimationEnd', ()=>{
+            container.style.animation = 'none';
+        });
+
+
+    </script>
+
+</body>
+
+</html>
